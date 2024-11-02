@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar with Hover Effect</title>
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Center the content */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #0066CC;
+    }
+
+    /* Navigation bar container */
+    .nav-container {
+      display: flex;
+      gap: 30px;
+      background-color: #fff;
+      padding: 15px 25px;
+      border-radius: 25px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Icon container */
+    .nav-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    /* Icon styling */
+    .nav-item img {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* Tooltip styling */
+    .tooltip {
+      position: absolute;
+      bottom: 50px;
+      padding: 8px 15px;
+      background-color: #fff;
+      color: #333;
+      font-weight: bold;
+      border-radius: 20px;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      white-space: nowrap;
+    }
+
+    /* Tooltip triangle */
+    .tooltip::before {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 8px;
+      border-style: solid;
+      border-color: #fff transparent transparent transparent;
+    }
+
+    /* Show tooltip on hover */
+    .nav-item:hover .tooltip {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation container -->
+  <div class="nav-container">
+    <!-- Home icon -->
+    <div class="nav-item">
+      <img src="https://img.icons8.com/ios-filled/50/000000/home.png" alt="Home">
+    </div>
+    <!-- User icon -->
+    <div class="nav-item">
+      <img src="https://img.icons8.com/ios-filled/50/000000/user.png" alt="User">
+    </div>
+    <!-- Contact icon with tooltip -->
+    <div class="nav-item">
+      <span class="tooltip">CONTACT</span>
+      <img src="https://img.icons8.com/ios-filled/50/8A2BE2/address-book.png" alt="Contact">
+    </div>
+    <!-- Map icon -->
+    <div class="nav-item">
+      <img src="https://img.icons8.com/ios-filled/50/000000/map.png" alt="Map">
+    </div>
+    <!-- Search icon -->
+    <div class="nav-item">
+      <img src="https://img.icons8.com/ios-filled/50/000000/search.png" alt="Search">
+    </div>
+  </div>
+</body>
+</html>
